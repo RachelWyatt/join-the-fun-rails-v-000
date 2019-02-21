@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20190221133420) do
     t.integer "taxi_id",      null: false
   end
 
+  add_index "passengers_taxis", ["passenger_id", "taxi_id"], name: "index_passengers_taxis_on_passenger_id_and_taxi_id"
+  add_index "passengers_taxis", ["taxi_id", "passenger_id"], name: "index_passengers_taxis_on_taxi_id_and_passenger_id"
+
   create_table "rides", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

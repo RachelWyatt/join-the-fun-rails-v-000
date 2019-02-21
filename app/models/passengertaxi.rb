@@ -1,3 +1,3 @@
-class PassengerTaxi < ActiveRecord::Base 
+class PassengerTaxi < ActiveRecord::Base
 
 end
